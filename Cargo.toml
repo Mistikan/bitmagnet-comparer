@@ -1,0 +1,25 @@
+[package]
+name = "bitmagnet-comparer"
+version = "0.1.0"
+authors = ["Sergei Ermeikin <sereja.ermeikin@gmail.com>"]
+edition = "2024"
+description = "Utility for extracting hashes from bitmagnet and outputting them to the console"
+license = "MIT"
+homepage = "https://github.com/Mistikan/bitmagnet-comparer"
+repository = "https://github.com/Mistikan/bitmagnet-comparer"
+readme = "README.md"
+categories = ["command-line-utilities", "filesystem"]
+keywords = ["bittorrent"]
+exclude = [
+	".github/workflows/rust.yml",
+]
+
+[dependencies]
+clap = { version = "4.5.38", features = ["derive"] }
+log = "0.4.27"
+json_log = { version = "0.2.1" }
+hex = "0.4.3"
+tokio = { version = "1.45.0", features = ["full"] }
+tokio-postgres = "0.7.13"
+chrono = "0.4.41"
+postgres-types = { version = "0.2.9", features = ["with-chrono-0_4"] }
