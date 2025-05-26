@@ -1,5 +1,5 @@
 use chrono::{DateTime, FixedOffset};
-use clap::{crate_authors, crate_description, crate_name, crate_version, Args, Parser, Subcommand};
+use clap::{Args, Parser, Subcommand, crate_authors, crate_description, crate_name, crate_version};
 use log::info;
 use std::path::PathBuf;
 use tokio_postgres::{Error, NoTls};
