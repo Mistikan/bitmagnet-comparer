@@ -1,5 +1,5 @@
 use chrono::{DateTime, FixedOffset};
-use clap::{Args, Parser, Subcommand};
+use clap::{crate_authors, crate_description, crate_name, crate_version, Args, Parser, Subcommand};
 use log::info;
 use std::path::PathBuf;
 use tokio_postgres::{Error, NoTls};
@@ -7,12 +7,10 @@ use tokio_postgres::{Error, NoTls};
 #[derive(Parser, Debug)]
 #[command(version, author, about, long_about = None)]
 #[command(
-    name = "bitmagnet-comparer",
-    author = "Sergei Ermeikin <sereja.ermeikin@gmail.com>",
-    // TODO: версия - можно ещё хещ и время билда указывать?
-    // TODO: и добавить семантик релиз?
-    version = "0.1.0",
-    about = "Utility for extracting hashes from bitmagnet and outputting them to the console"
+    name = crate_name!(),
+    author = crate_authors!(),
+    version = crate_version!(),
+    about = crate_description!()
 )]
 struct App {
     #[clap(flatten)]
