@@ -1,6 +1,6 @@
 [package]
 name = "bitmagnet-comparer"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Sergei Ermeikin <sereja.ermeikin@gmail.com>"]
 edition = "2024"
 description = "Utility for extracting hashes from bitmagnet and outputting them to the console"
